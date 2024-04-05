@@ -1,19 +1,24 @@
 <h2>Formulário de Produtos</h2>
+    <div class="mb-3">
+        <label for="id" class="form-label">ID:</label>
+        <input type="number" class="form-control" 
+            [(ngModel)]="produto.id" id="id">
+    </div>
 
-<div>
-    <label for="id">ID:</label>
-    <input type="number" [(ngModel)]="produto.id" id="id">
-    <br />
+    <div class="mb-3">
+        <label for="nome" class="form-label">NOME:</label>
+        <input [(ngModel)]="produto.nome" 
+            class="form-control"
+            id="nome">
+    </div>
 
-    <label for="nome">NOME:</label>
-    <input [(ngModel)]="produto.nome" id="nome">
-    <br />
+    <div class="mb-3">
+        <label for="preco" class="form-label">PREÇO:</label>
+        <input [(ngModel)]="produto.preco" 
+            class="form-control"
+            id="preco">
+    </div>
 
-    <label for="preco">PREÇO:</label>
-    <input [(ngModel)]="produto.preco" id="preco">
-    <br />
-
-    <button (click)="cadastrar()">Cadastrar</button>
-</div>
-{{produto|json}}
-<br />
+    <button class="btn btn-primary" (click)="cadastrar()">
+        Cadastrar
+    </button>
